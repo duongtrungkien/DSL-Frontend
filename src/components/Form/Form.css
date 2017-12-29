@@ -1,0 +1,11 @@
+.bar-form input{
+    display: inline-block;
+    float: right;
+    width: 15%;
+    margin-right: 10px;
+}
+
+.menu-button {
+    display: inline-block;
+    float: right;
+}
