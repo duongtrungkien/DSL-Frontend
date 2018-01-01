@@ -1,6 +1,14 @@
 .nav-item a {
-    background-color: #cecece !important;
+    background-color: #ffffff !important;
     color: black !important;
     margin: 10px;
 }
 
+.nav-icon {
+    float: left;
+    font-size: 48px;
+    margin-top: 5px;
+    margin-left: 10px;
+    color: #121;
+    text-decoration: none;
+}

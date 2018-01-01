@@ -2,10 +2,8 @@ import React, {Component} from 'react'
 import FormGroup from 'react-bootstrap/lib/FormGroup'
 import FormControl from 'react-bootstrap/lib/FormControl'
 import Button from 'react-bootstrap/lib/Button'
-import axios from 'axios'
 import './Form.css'
 
-axios.defaults.baseURL = 'http://localhost:5000/api';
 
 export default class Form extends Component {
     constructor(props) {
@@ -27,14 +25,7 @@ export default class Form extends Component {
 
     handleClick(){
         let {username, password} = this.state;
-
-        axios.post('/login',{
-            username,
-            password,
-        })
-        .then(function (response) {
-            console.log(response);
-        })
+        this.props.onSubmit(username, password)
     }
 
     render() {
