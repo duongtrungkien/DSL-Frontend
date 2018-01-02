@@ -1,9 +1,10 @@
 import axios from 'axios'
-import {LOGIN} from './actionTypes'
+import {LOGIN, LOGOUT} from './actionTypes'
 import api from './api'
+import {initialState} from "../store";
 
 
-export function login(username, password){
+export function login(username, password) {
 
     console.log(username, password)
 
@@ -46,6 +47,17 @@ export function login(username, password){
 
         })
     }
+}
 
-
+export function logout() {
+     return dispatch => {
+         dispatch({
+             type: LOGOUT,
+             data: {
+                 status: 'success',
+                 context: 'logout',
+                 ...initialState.user
+             }
+         })
+     }
 }

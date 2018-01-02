@@ -1,12 +1,23 @@
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
-// import createHistory from 'history/createBrowserHistory'
 import reducer from '../reducer/Index'
 
-// export const history = createHistory();
 
-const initialState = {
-    user: {}
+
+export const initialState = {
+    user: {
+        id: null,
+        username: null,
+        first_name: null,
+        last_name: null,
+        role: null,
+        time_created: null,
+        time_updated: null,
+    },
+
+    category: {
+        items: [],
+    }
 };
 const enhancers = [];
 const middleware = [

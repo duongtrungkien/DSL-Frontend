@@ -12,3 +12,8 @@
     color: #121;
     text-decoration: none;
 }
+
+.menu-button {
+    display: inline-block;
+    float: right;
+}

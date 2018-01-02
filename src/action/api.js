@@ -4,5 +4,6 @@ axios.defaults.baseURL = 'http://localhost:5000/api';
 
 export default {
     login: '/login',
-    register: '/register'
+    register: '/register',
+    getCategories: '/categories',
 }
